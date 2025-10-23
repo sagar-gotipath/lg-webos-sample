@@ -173,7 +173,12 @@ var MediaPlayer = (function () {
     basePlayer
       .getNetworkingEngine()
       ?.registerResponseFilter(async function (type, response, context) {
-        console.log("Response filter", type, response, context);
+        
+        const uri = request.uris[0];
+         if (uri.includes("kms") || uri.includes("keys")) {
+          console.log("RESPONSE FILTER :", type, response, context)
+         }
+
       });
   };
 
