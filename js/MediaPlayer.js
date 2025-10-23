@@ -155,6 +155,21 @@ var MediaPlayer = (function () {
       Status.OnPlayerError(error, errorText);
     }
   };
+  
+
+  var setupCdnTokenAuth = function (basePlayer){
+    basePlayer.getNetworkingEngine().registerRequestFilter(async function (type, request, context) {
+        const uri = request.uris[0];
+
+        console.log('URI: ', uri)
+        if (uri.includes('kms') || uri.includes('keys')) {
+            request.headers['referer-override'] = "https://www.chorki.com";
+            request.headers['platform'] = "android"
+            request.headers['vpsid'] = "417eae185605f2f26e890ab0a316bf9b4af7f5af"
+
+        }
+    });
+  }
 
   var _loadUrl = function () {
     window.player
@@ -187,6 +202,8 @@ var MediaPlayer = (function () {
       },
     });
     window.player = player;
+
+    setupCdnTokenAuth(player)
     // Loading URL on the Player
     _loadUrl();
     OnPlayerRegisterEvent();

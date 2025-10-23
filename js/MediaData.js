@@ -2,7 +2,10 @@ var MediaData = (function () {
   var uiStatus = "Loading...";
   var mpStatus = "Loading...";
   var mediaUrl =
-    "https://bitmovin-a.akamaihd.net/content/MI201109210084_1/mpds/f08e80da-bf1d-4e3d-8899-f0f6155f6efa.mpd";
+  "https://video-chorki.gotipath.com/transcoded/fda590f5-33a8-4538-a4d7-c85fcb6ddb8f/playlist.m3u8";
+  // "https://video-chorki.gotipath.com/transcoded/e2c1cd7f-5597-4a6a-80b4-8d5c0d75efc3/playlist.m3u8";
+  // "https://video-chorki.gotipath.com/transcoded/b22fc629-ad57-448b-bbe1-28022378c58c/playlist.m3u8";
+    // "https://bitmovin-a.akamaihd.net/content/MI201109210084_1/mpds/f08e80da-bf1d-4e3d-8899-f0f6155f6efa.mpd";
   var controlList = document.getElementsByClassName("control");
   var ctrlList = document.getElementsByClassName("ctrl");
 

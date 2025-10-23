@@ -8,7 +8,13 @@
     <link rel="stylesheet" href="css/Player.css" />
     <link rel="stylesheet" href="css/SnackBar.css" />
     <!-- Shaka Player ui compiled library default CSS: -->
-    <script src="lib/shaka/shaka-player.compiled.js"></script>
+    <!-- <script src="lib/shaka/shaka-player.compiled.js"></script> -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.16.3/shaka-player.compiled.js"
+      integrity="sha512-7R5biCSmEMihR/A5z5SEGE1HV5Wf2ECGOW09ukOs/vC5EUrMlSVLcuZS/aYocF+Usc9ujJkolD9l093IATKnEw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
     <!-- Your application source: -->
     <script type="text/javascript" src="js/AppLog.js"></script>
     <script type="text/javascript" src="js/ErrorCode.js"></script>
@@ -19,10 +25,14 @@
     <script type="text/javascript" src="js/MediaPlayer.js"></script>
     <script type="text/javascript" src="js/MediaPlayerUI.js"></script>
     <script type="text/javascript" src="lib/spatial_navigation.js"></script>
-    <script
+    <!-- <script
       type="text/javascript"
       src="lib/webOSTVjs-1.2.4/webOSTV.js"
-    ></script>
+    ></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/eruda"></script>
+    <script>
+      eruda.init();
+    </script>
   </head>
   <body>
     <div class="main_container">
